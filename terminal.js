@@ -42,7 +42,7 @@ input.addEventListener('keydown', ({ key }) => {
     input.value = ''
 
     if (val) {
-      appendRow(dirName() + val)
+      appendRow(dirName() + val, '#8be9fd')
       const split = val.split(' ')
       if (split[0].toLowerCase() === 'cd') {
         process.chdir(split.slice(1).join(' '))
@@ -59,7 +59,7 @@ input.addEventListener('keydown', ({ key }) => {
         })
       }
     } else {
-      appendRow(dirName())
+      appendRow(dirName('&npsp', '#8be9fd'))
     }
   }
 

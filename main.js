@@ -1,7 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 
-require('electron-reload')(__dirname)
-
 // Keep a global reference of the window object, so it dos not got GCd
 let mainWindow
 

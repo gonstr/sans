@@ -6,7 +6,6 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^2.0.0",
-    "electron-reload": "^1.2.5"
+    "electron": "^2.0.0"
   }
 }
