@@ -20,6 +20,12 @@
       color: #f8f8f2;
       margin: 0 15px;
     }
+    #main pre {
+      font-family: Monaco;
+      font-size: 12px;
+      color: #f8f8f2;
+      margin: 0;
+    }
     #input {
       font-family: Monaco;
       font-size: 12px;
@@ -29,11 +35,13 @@
       outline: none;
       color: #f8f8f2;
       width: 100%;
+      visibility: visible;
     }
   </style>
   <body>
     <div id="header"></div>
-    <div id="main">test</div>
+    <div id="main"></div>
     <input id="input" type="text" onblur="this.focus()" autofocus>
+    <script>require('./terminal.js')</script>
   </body>
 </html>
