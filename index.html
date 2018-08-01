@@ -12,36 +12,57 @@
       margin: 0;
     }
     #header {
+      position: fixed;
       height: 35px;
       width: 100%;
       -webkit-app-region: drag;
     }
     #main {
+      position: fixed;
+      top: 35px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: scroll;
+    }
+    #output {
       color: #f8f8f2;
       margin: 0 15px;
     }
-    #main pre {
+    #output pre {
       font-family: Monaco;
       font-size: 12px;
       color: #f8f8f2;
       margin: 0;
     }
+    #input-wrapper {
+      display: flex;
+      align-items: center;
+      margin: 0 15px 15px 15px;
+    }
+    #dir {
+      color: #8be9fd;
+    }
     #input {
       font-family: Monaco;
       font-size: 12px;
-      margin: 0 15px 15px 15px;
       background: transparent;
       border: none;
       outline: none;
       color: #f8f8f2;
       width: 100%;
-      visibility: visible;
+      padding: 0;
     }
   </style>
   <body>
     <div id="header"></div>
-    <div id="main"></div>
-    <input id="input" type="text" onblur="this.focus()" autofocus>
+    <div id="main">
+      <div id="output"></div>
+      <div id="input-wrapper">
+        <span id="dir"></span>
+        <input id="input" type="text" onblur="this.focus()" autofocus>
+      </div>
+    </div>
     <script>require('./terminal.js')</script>
   </body>
 </html>
