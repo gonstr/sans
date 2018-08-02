@@ -1,12 +1,18 @@
 const { app, BrowserWindow } = require('electron')
 
 // Keep a global reference of the window object, so it dos not got GCd
-let mainWindow
+let win
 
 function createWindow() {
-  mainWindow = new BrowserWindow({ width: 800, height: 600, titleBarStyle: 'hiddenInset' })
-  mainWindow.loadFile('index.html')
-  mainWindow.on('closed', () => (mainWindow = null))
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    titleBarStyle: 'hiddenInset',
+    show: false
+  })
+  win.once('ready-to-show', () => win.show())
+  win.loadFile('index.html')
+  win.on('closed', () => (mainWindow = null))
 }
 
 app.on('ready', createWindow)
@@ -20,5 +26,5 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
-  if (mainWindow === null) createWindow()
+  if (win === null) createWindow()
 })

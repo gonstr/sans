@@ -10,7 +10,7 @@ const dir = document.getElementById('dir')
 const input = document.getElementById('input')
 
 hljs.configure({
-  languages: ['json', 'javascript']
+  languages: ['json', 'javascript', 'html', 'css', 'markdown']
 })
 
 let proc
@@ -20,7 +20,12 @@ updateDir()
 
 function appendRow(text, highlight = true, color) {
   const pre = document.createElement('pre')
-  pre.innerHTML = highlight ? hljs.highlightAuto(text).value : text
+  if (highlight) {
+    const processed = hljs.highlightAuto(text)
+    pre.innerHTML = processed.relevance > 20 ? processed.value : text
+  } else {
+    pre.innerHTML = text
+  }
   if (color) pre.style.color = color
   output.appendChild(pre)
   main.scrollTop = main.scrollHeight
