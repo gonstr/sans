@@ -62,9 +62,11 @@
       <div id="output"></div>
       <div id="input-wrapper">
         <span id="dir"></span>
-        <input id="input" type="text" onblur="this.focus()" autofocus>
+        <input id="input" type="text" autofocus>
       </div>
     </div>
-    <script>require('./terminal.js')</script>
+    <script>require('./lib/input.js')</script>
+    <script>require('./lib/proc.js')</script>
+    <script>require('./lib/renderer.js')</script>
   </body>
 </html>
