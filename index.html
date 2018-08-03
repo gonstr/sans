@@ -2,13 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="node_modules/xterm/dist/xterm.css"/>
   </head>
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-  <link rel="stylesheet" href="node_modules/highlight.js/styles/dracula.css">
   <style>
     body {
-      font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
-      font-size: 14px;
       background: #282a36;
       margin: 0;
     }
@@ -18,28 +15,17 @@
       width: 100%;
       -webkit-app-region: drag;
     }
-    #main {
+    #xterm {
       position: fixed;
       top: 35px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow-y: scroll;
-      color: #f8f8f2;
-    }
-    #main pre {
-      font-family: inherit;
-      font-size: inherit;
-      white-space: pre-wrap;
-      color: #f8f8f2;
-      margin: 0;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
     }
   </style>
   <body>
     <div id="header"></div>
-    <div id="main">
-    <script>require('./lib/input.js')</script>
-    <script>require('./lib/shell.js')</script>
-    <script>require('./lib/renderer.js')</script>
+    <div id="xterm"></div>
+    <script>require('./lib/term.js')</script>
   </body>
 </html>
