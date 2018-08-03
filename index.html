@@ -25,48 +25,21 @@
       right: 0;
       bottom: 0;
       overflow-y: scroll;
-    }
-    #output {
       color: #f8f8f2;
-      margin: 0 15px;
     }
-    #output pre {
+    #main pre {
       font-family: inherit;
       font-size: inherit;
       white-space: pre-wrap;
       color: #f8f8f2;
       margin: 0;
     }
-    #input-wrapper {
-      display: flex;
-      align-items: center;
-      margin: 0 15px 15px 15px;
-    }
-    #dir {
-      color: #8be9fd;
-    }
-    #input {
-      font-family: inherit;
-      font-size: inherit;
-      background: transparent;
-      border: none;
-      outline: none;
-      color: #8be9fd;
-      width: 100%;
-      padding: 0;
-    }
   </style>
   <body>
     <div id="header"></div>
     <div id="main">
-      <div id="output"></div>
-      <div id="input-wrapper">
-        <span id="dir"></span>
-        <input id="input" type="text" autofocus>
-      </div>
-    </div>
     <script>require('./lib/input.js')</script>
-    <script>require('./lib/proc.js')</script>
+    <script>require('./lib/shell.js')</script>
     <script>require('./lib/renderer.js')</script>
   </body>
 </html>
