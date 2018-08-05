@@ -1,2 +1,7 @@
+# osx
+.DS_store
+
+# node
 node_modules
 build
+dist
