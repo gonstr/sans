@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
   target: 'electron-renderer',
-  entry: './lib/app/index.js',
+  entry: ['babel-polyfill', './lib/app/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.js'

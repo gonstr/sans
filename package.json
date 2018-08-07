@@ -1,33 +1,29 @@
 {
   "name": "terminal",
   "version": "1.0.0",
-  "main": "lib/electron/index.js",
+  "main": "lib/electron/init.js",
   "scripts": {
     "start": "electron .",
-    "wp": "webpack -d --watch",
     "build": "webpack -p && electron-packager ./ --out=./build --overwrite",
     "rebuild": "electron-rebuild"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "electron": "^2.0.0",
+    "electron-compilers": "^5.9.0",
     "electron-packager": "^12.1.0",
-    "electron-rebuild": "^1.8.2",
-    "webpack": "^4.16.4",
-    "webpack-cli": "^3.1.0",
-    "webpack-node-externals": "^1.7.2"
+    "electron-rebuild": "^1.8.2"
   },
   "dependencies": {
+    "electron-compile": "^6.4.3",
     "lodash": "^4.17.10",
     "node-pty": "^0.7.6",
     "os-locale": "^2.1.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
     "xterm": "^3.5.1"
   }
 }
