@@ -4,7 +4,7 @@
   "main": "lib/electron/compile-init.js",
   "scripts": {
     "start": "electron .",
-    "build": "webpack -p && electron-packager ./ --out=./build --overwrite",
+    "build": "electron-packager ./ --out=./build --overwrite",
     "rebuild": "electron-rebuild"
   },
   "devDependencies": {
