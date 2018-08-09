@@ -1,30 +1,57 @@
 {
   "name": "terminal",
   "version": "1.0.0",
-  "main": "lib/electron/compile-init.js",
+  "main": "lib/electron/index.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager ./ --out=./build --overwrite",
-    "rebuild": "electron-rebuild"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "electron": "^2.0.0",
     "electron-compilers": "^5.9.0",
-    "electron-packager": "^12.1.0",
+    "electron-forge": "^5.2.2",
+    "electron-prebuilt-compile": "2.0.5",
     "electron-rebuild": "^1.8.2"
   },
   "dependencies": {
     "electron-compile": "^6.4.3",
+    "electron-squirrel-startup": "^1.0.0",
     "lodash": "^4.17.10",
     "node-pty": "^0.7.6",
     "os-locale": "^2.1.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "xterm": "^3.5.1"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": ["squirrel"],
+        "darwin": ["zip"],
+        "linux": ["deb", "rpm"]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn"
+      },
+      "electronWinstallerConfig": {
+        "name": "terminal"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "terminal"
+      }
+    }
   }
 }
