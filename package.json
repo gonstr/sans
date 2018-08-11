@@ -5,7 +5,8 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "lint": "eslint lib"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -17,7 +18,9 @@
     "electron-compilers": "^5.9.0",
     "electron-forge": "^5.2.2",
     "electron-prebuilt-compile": "2.0.5",
-    "electron-rebuild": "^1.8.2"
+    "electron-rebuild": "^1.8.2",
+    "eslint": "^5.3.0",
+    "eslint-plugin-node": "^7.0.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
