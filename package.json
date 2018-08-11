@@ -1,5 +1,5 @@
 {
-  "name": "sans",
+  "name": "Sans",
   "version": "1.0.0",
   "main": "lib/electron/index.js",
   "scripts": {
