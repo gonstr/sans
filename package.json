@@ -1,5 +1,5 @@
 {
-  "name": "terminal",
+  "name": "sans",
   "version": "1.0.0",
   "main": "lib/electron/index.js",
   "scripts": {
@@ -49,7 +49,7 @@
         "packageManager": "yarn"
       },
       "electronWinstallerConfig": {
-        "name": "terminal"
+        "name": "sans"
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
@@ -59,7 +59,7 @@
       },
       "windowsStoreConfig": {
         "packageName": "",
-        "name": "terminal"
+        "name": "sans"
       }
     }
   }
