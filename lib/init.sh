@@ -1,15 +1,8 @@
 #!/bin/bash
 update() {
-  [ -s $HOME/.sans/sessions/$$/cmd ] && > $HOME/.sans/sessions/$$/cmd
+  > $HOME/.sans/sessions/$$/cmd
   pwd > $HOME/.sans/sessions/$$/pwd
-  git status -b --porcelain 2> /dev/null | awk '$1 ~ /##/ { print $2 }' > $HOME/.sans/sessions/$$/branch
-}
-
-init() {
-  mkdir -p $HOME/.sans/sessions/$$ 2> /dev/null
-  touch $HOME/.sans/sessions/$$/pwd
-  touch $HOME/.sans/sessions/$$/cmd
-  touch $HOME/.sans/sessions/$$/branch
+  git status -b --porcelain 2> /dev/null > $HOME/.sans/sessions/$$/git
 }
 
 containsElement() {
@@ -31,7 +24,6 @@ cleanup() {
 
 trap 'cleanup' EXIT
 
-init
 update
 
 preexec() {
