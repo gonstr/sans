@@ -23,7 +23,7 @@ cleanup() {
 }
 
 trap 'cleanup' EXIT
-
+cleanup
 update
 
 preexec() {
