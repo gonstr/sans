@@ -1,4 +1,6 @@
 #!/bin/bash
+source $HOME/.sans/bash-preexec.sh
+
 update() {
   > $HOME/.sans/sessions/$$/cmd
   pwd > $HOME/.sans/sessions/$$/pwd
