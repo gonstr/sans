@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "bash-preexec": "git+ssh://git@github.com/rcaloras/bash-preexec#0.3.7",
     "electron-compile": "^6.4.3",
     "electron-squirrel-startup": "^1.0.0",
     "emotion": "^9.2.6",
