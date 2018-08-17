@@ -2,6 +2,9 @@
   "name": "Sans",
   "version": "1.0.0",
   "main": "lib/electron/index.js",
+  "engines": {
+    "node": ">=10.7.0"
+  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
