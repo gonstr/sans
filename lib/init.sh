@@ -1,6 +1,6 @@
 #!/bin/bash
 source $HOME/.sans/bash-preexec.sh
-[ ! -z "${LSCOLORS}" ] && export CLICOLOR=1 && export LSCOLORS=GxFxCxDxBxegedabagaced
+[ -z "${LSCOLORS}" ] && export CLICOLOR=1 && export LSCOLORS=GxFxCxDxBxegedabagaced
 
 update() {
   > $HOME/.sans/sessions/$$/cmd
