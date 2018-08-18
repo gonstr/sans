@@ -1,5 +1,6 @@
 ### TODO
 
+- Getting lots of rerenders becuase of forceUpdate. Think of something better...
 - Detect production in menus (does not work with NODE_ENV)
 - (close, add header button)
 - Make zoom work (no zoom on headers)
