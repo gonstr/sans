@@ -1,7 +1,7 @@
 {
   "name": "Sans",
   "main": "lib/electron/index.js",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "engines": {
     "node": ">=10.7.0"
   },
