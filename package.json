@@ -1,6 +1,7 @@
 {
   "name": "Sans",
   "main": "lib/electron/index.js",
+  "version": "1.0.2",
   "engines": {
     "node": ">=10.7.0"
   },
@@ -29,6 +30,7 @@
     "babel-polyfill": "^6.26.0",
     "bash-preexec": "git+ssh://git@github.com/rcaloras/bash-preexec#0.3.7",
     "electron-compile": "^6.4.3",
+    "electron-is-dev": "^0.3.0",
     "electron-squirrel-startup": "^1.0.0",
     "emotion": "^9.2.6",
     "env-cmd": "^8.0.2",
