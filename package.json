@@ -1,7 +1,7 @@
 {
   "name": "Sans",
   "main": "lib/electron/index.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "node": ">=10.7.0"
   },
@@ -44,16 +44,9 @@
   "config": {
     "forge": {
       "make_targets": {
-        "win32": [
-          "squirrel"
-        ],
-        "darwin": [
-          "zip"
-        ],
-        "linux": [
-          "deb",
-          "rpm"
-        ]
+        "win32": ["squirrel"],
+        "darwin": ["zip"],
+        "linux": ["deb", "rpm"]
       },
       "electronPackagerConfig": {
         "packageManager": "yarn"
