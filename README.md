@@ -1,6 +1,5 @@
 ### TODO
 
-- Getting lots of rerenders becuase of forceUpdate. Think of something better...
 - (close, add header button)
 - Make zoom work (no zoom on headers)
 
