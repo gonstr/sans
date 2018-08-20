@@ -9,7 +9,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish-github": "env-cmd .env electron-forge publish",
+    "forge-publish": "env-cmd .env electron-forge publish",
     "prettier": "prettier --write 'lib/**/*.js'",
     "lint": "eslint lib"
   },
