@@ -5,7 +5,7 @@ source $HOME/.sans/bash-preexec.sh
 update() {
   > $HOME/.sans/sessions/$$/cmd
   pwd > $HOME/.sans/sessions/$$/pwd
-  git status -b --porcelain 2> /dev/null > $HOME/.sans/sessions/$$/git
+  git status -b --porcelain=v2 2> /dev/null > $HOME/.sans/sessions/$$/git
 }
 
 containsElement() {
