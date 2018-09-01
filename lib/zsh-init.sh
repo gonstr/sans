@@ -11,10 +11,10 @@ sans_precmd() {
   : > $HOME/.sans/sessions/$$/cmd
 }
 
+sans_chpwd
+
 autoload -Uz add-zsh-hook
 
 add-zsh-hook chpwd sans_chpwd
 add-zsh-hook preexec sans_preexec
 add-zsh-hook precmd sans_precmd
-
-sans_chpwd

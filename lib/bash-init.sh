@@ -15,5 +15,7 @@ sans_precmd() {
   sans_update
 }
 
+sans_update
+
 preexec_functions+=(sans_preexec)
 precmd_functions+=(sans_precmd)
