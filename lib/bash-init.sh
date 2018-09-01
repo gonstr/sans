@@ -7,12 +7,13 @@ sans_update() {
   git status -b --porcelain=v2 2> /dev/null > $HOME/.sans/sessions/$$/git
 }
 
-preexec() {
+sans_preexec() {
   echo $1 > $HOME/.sans/sessions/$$/cmd
 }
 
-precmd() {
+sans_precmd() {
   sans_update
 }
 
-sans_update
+preexec_functions+=(sans_preexec)
+precmd_functions+=(sans_precmd)

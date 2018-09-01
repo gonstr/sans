@@ -17,4 +17,4 @@ add-zsh-hook chpwd sans_chpwd
 add-zsh-hook preexec sans_preexec
 add-zsh-hook precmd sans_precmd
 
-pwd > $HOME/.sans/sessions/$$/pwd
+sans_chpwd
