@@ -1,5 +1,5 @@
 #!/bin/bash
-source $HOME/.sans/bash-preexec.sh
+source $HOME/.sans/scripts/bash-preexec.sh
 
 sans_update() {
   > $HOME/.sans/sessions/$$/cmd
