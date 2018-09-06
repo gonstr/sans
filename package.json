@@ -37,6 +37,7 @@
     "electron-store": "^2.0.0",
     "emotion": "^9.2.6",
     "env-cmd": "^8.0.2",
+    "escape-string-regexp": "^1.0.5",
     "eventemitter3": "^3.1.0",
     "fs-extra": "^7.0.0",
     "lodash": "^4.17.10",
