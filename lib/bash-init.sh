@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source $HOME/.sans/scripts/bash-preexec.sh
+source $HOME/.sans/bash-preexec.sh
 
 sans_message() {
-  echo $$ $1 $2 | nc -U $SANS_IPC_FD -
+  echo $$ $* | nc -U $SANS_IPC_FD -
 }
 
 sans_preexec() {

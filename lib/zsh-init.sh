@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 sans_message() {
-  echo $$ $1 $2 | nc -U $SANS_IPC_FD -
+  echo $$ $* | nc -U $SANS_IPC_FD -
 }
 
 sans_chpwd() {
