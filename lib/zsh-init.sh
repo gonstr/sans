@@ -1,14 +1,19 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
+
+sans_message() {
+  echo $$ $1 $2 | nc -U $SANS_IPC_FD -
+}
+
 sans_chpwd() {
-  pwd > $HOME/.sans/sessions/$$/pwd
+  sans_message pwd $(pwd)
 }
 
 sans_preexec() {
-  echo $1 > $HOME/.sans/sessions/$$/cmd
+  sans_message cmd $1
 }
 
 sans_precmd() {
-  : > $HOME/.sans/sessions/$$/cmd
+  sans_message cmd ""
 }
 
 sans_chpwd

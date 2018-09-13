@@ -45,6 +45,7 @@
     "fs-extra": "^7.0.0",
     "lodash": "^4.17.10",
     "mousetrap": "^1.6.2",
+    "nanoid": "^1.2.3",
     "node-pty": "^0.7.6",
     "os-locale": "^2.1.0",
     "react": "^16.4.2",
