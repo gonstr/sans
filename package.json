@@ -55,13 +55,22 @@
   "config": {
     "forge": {
       "make_targets": {
-        "win32": ["squirrel"],
-        "darwin": ["zip"],
-        "linux": ["deb", "rpm"]
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
       },
       "electronPackagerConfig": {
         "packageManager": "yarn",
-        "ignore": ["external"]
+        "ignore": [
+          "external"
+        ]
       },
       "electronWinstallerConfig": {
         "name": "sans"
