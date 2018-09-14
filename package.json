@@ -50,27 +50,18 @@
     "os-locale": "^2.1.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "xterm": "^3.5.1"
+    "xterm": "^3.7.0"
   },
   "config": {
     "forge": {
       "make_targets": {
-        "win32": [
-          "squirrel"
-        ],
-        "darwin": [
-          "zip"
-        ],
-        "linux": [
-          "deb",
-          "rpm"
-        ]
+        "win32": ["squirrel"],
+        "darwin": ["zip"],
+        "linux": ["deb", "rpm"]
       },
       "electronPackagerConfig": {
         "packageManager": "yarn",
-        "ignore": [
-          "external"
-        ]
+        "ignore": ["external"]
       },
       "electronWinstallerConfig": {
         "name": "sans"
