@@ -3,7 +3,7 @@
 source $HOME/.sans/bash-preexec.sh
 
 sans_message() {
-  echo $$ $* | nc -U $SANS_IPC_FD -
+  echo -n "$$ $*" | nc -U $SANS_IPC_FD -
 }
 
 sans_preexec() {
@@ -11,7 +11,7 @@ sans_preexec() {
 }
 
 sans_precmd() {
-  sans_message git $(git status -b --porcelain=v2 2> /dev/null)
+  sans_message git "$(git status -b --porcelain=v2 2> /dev/null)"
   sans_message pwd $(pwd)
   sans_message cmd ""
 }
